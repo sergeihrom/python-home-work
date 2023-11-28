@@ -1,9 +1,12 @@
 user_01 =input("трехзначное число: ")
-
-number = int(user_01)
-
-if 100 <= number <= 999:
-    second_digit = (number // 10) % 10
-    print("Вторая цифра числа", second_digit)
+try:
+    number = int(user_01)
+except ValueError:
+    print("Вы ввеели не число!")
 else:
-    print("Число не является трехзначным.")
+
+    if 100 <= number <= 999:
+        second_digit = (number // 10) % 10
+        print("Вторая цифра числа", second_digit)
+    else:
+        print("Число не является трехзначным.")
