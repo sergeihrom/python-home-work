@@ -5,10 +5,12 @@ uan= 7.09
 azn = 1.70
 User_in = input("Ввдите колличеество USD: ")
 summ = float(User_in)
+#VN:   ^^^^^^ нет обработки исключения!
 print("Введите нужную валюту:(eur, uan, azn)")
 currency = input("Ваша валюта: ")
 if currency == "eur":
    convertacia = eur * sum
+   #VN:                ^^^ опечатка. Если ввести 'eur', программа здесь падает. 
    print("Ваша сумма в EUR:", convertacia)
 elif currency == "uan":
    convertacia = uan * summ

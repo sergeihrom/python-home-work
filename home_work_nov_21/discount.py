@@ -1,5 +1,6 @@
 user_in = input("Введите сумму покупки: ")
 summ = int(user_in)
+#VN: нет обработки исключения!
 if 200 <= summ < 300:
     discountPrice = (summ - (summ * 3 / 100))
     print("Ваша сумма со скидкой: ", discountPrice)
