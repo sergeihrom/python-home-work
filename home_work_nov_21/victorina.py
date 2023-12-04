@@ -1,3 +1,4 @@
+
 score = 0
 score_step = 2
 
