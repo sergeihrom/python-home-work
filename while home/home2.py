@@ -1,9 +1,5 @@
 user_in = input("Введите  число от 0 до 9: ")
-try:
-    num = int(user_in)
-except ValueError:
-    print("Введит число в цифрах!")
-
+num = int(user_in)
 match num:
     case 1:
         print('!')
