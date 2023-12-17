@@ -1,14 +1,14 @@
+# Ввод массива от пользователя c обработкой исключения ValueError
 try:
-    purchase_price = float(input("Введите стоимость покупки в $: "))
-    discount_percentage = float(input("Введите размер скидки в %: "))
+    array = input("Введите числа массива через пробел: ").split()
+    array = [int(x) for x in array]
 except ValueError:
-    print("Введите данные цифрами!")
-    exit()
+    print("Введите значения цифрами!")
+# Находим индексы минимального и максимального чисел
+min_index = array.index(min(array))
+max_index = array.index(max(array))
 
-discount_amount = purchase_price * (discount_percentage / 100)
-total_amount = purchase_price - discount_amount
+# Вычисляем расстояние между минимальным и максимальным числами
+distance = abs(min_index - max_index)
 
-
-print(f"Стоимость покупки: ${purchase_price:.2f}")
-print(f"Скидка: ${discount_amount:.2f} ({discount_percentage:.2f}%)")
-print(f"Сумма к оплате: ${total_amount:.2f}")
+print("Расстояние между минимальным и максимальным числами:", distance)

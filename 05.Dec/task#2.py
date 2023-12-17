@@ -1,6 +1,14 @@
-# Нумерология. Запросите у пользователя слово любой длины и выведите сумму кодов всех символов в этом слове. Для нахождения кода символа используйте функцию ord().
-word = input("Введите слово любой длинны: ")
+try:
+    user_input = input("Введите числа через пробел: ")
+    my_list = [int(x) for x in user_input.split()]
+except ValueError:
+    print("Введите числа цифрами!")
+min_val = min(my_list)
+max_val = max(my_list)
 
-char_sum = sum(ord(char) for char in word)
+min_index = my_list.index(min_val)
+max_index = my_list.index(max_val)
 
-print(f"Сумма кодов символов в слове '{word}': {char_sum}")
+my_list[min_index], my_list[max_index] = my_list[max_index], my_list[min_index]
+
+print("Список после обмена:", my_list)

@@ -1,10 +1,9 @@
-
 try:
-    year = int(input("Введите год вашего рождения: "))
-    month = int(input("Введите месяц вашего рождения: "))
-    day = int(input("Введите число вашего рождения: "))
+    user_input = input("Введите числа через пробел: ")
+    my_list = [int(x) for x in user_input.split()]
 except ValueError:
-    print("Ошибка ввода. Пожалуйста, введите числа.")
-else:
-    formatted_date = "{:02d}.{:02d}.{}".format(day, month, year)
-    print("Дата вашего рождения: ", formatted_date)
+    print("Введите числа цифрами!")
+    exit()
+
+result_list = [my_list[i] for i in range(1, len(my_list)) if my_list[i] > my_list[i - 1]]
+print(result_list)
