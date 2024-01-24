@@ -20,3 +20,6 @@ try:
 
 except Exception as e:
     print(f"Произошла ошибка: {str(e)}")
+
+
+#VN: те же замечания, что и в calc_area.py
