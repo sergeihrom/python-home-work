@@ -46,3 +46,7 @@ except FileNotFoundError:
     print("Файл не найден. Пожалуйста, укажите существующие файлы.")
 except Exception as e:
     print("Произошла ошибка:", str(e))
+
+
+
+#VN: по этому коду тоже хочу побеседовать

@@ -40,3 +40,5 @@ if len(sys.argv) != 2:
 else:
     html_file_path = sys.argv[1]
     extract_headers_and_title(html_file_path)
+
+#VN: хочу задать вам вопросы про этот код
